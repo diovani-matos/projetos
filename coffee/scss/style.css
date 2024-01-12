@@ -129,6 +129,69 @@ header {
 }
 
 /* FIN ICON-MENU */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.mobile-menu-overlay ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.mobile-menu-overlay li {
+  margin-bottom: 20px;
+}
+
+.mobile-menu-overlay a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.4s;
+}
+
+.mobile-menu-overlay a:hover {
+  color: #BC9667;
+}
+
+@media screen and (max-width: 780px) and (min-width: 767px) {
+  .icon-menu {
+    display: flex;
+    z-index: 2000;
+    margin: 20px 10px 0 0;
+  }
+  .navigation {
+    display: none;
+  }
+  .header-icons i {
+    display: none;
+  }
+}
+@media screen and (min-width: 390px) and (max-width: 779px) {
+  .header img {
+    display: none;
+  }
+  .icon-menu {
+    display: flex;
+    z-index: 2000;
+    margin: 20px 10px 0 0;
+  }
+  .navigation {
+    display: none;
+  }
+  .header-icons i {
+    display: none;
+  }
+}
 .container {
   max-width: 1240px;
   margin: 0 auto;
@@ -263,9 +326,11 @@ header {
   padding: 8px;
 }
 .products .grid-products .img-item img {
-  max-width: 250px;
+  max-width: 100%;
+  height: auto;
   background-color: #f1fde4;
   margin-bottom: 20px;
+  display: block;
   padding: 40px;
   border-radius: 4px;
 }
@@ -341,16 +406,19 @@ header {
   padding: 8px;
 }
 .assessments .grid-assessments .people img {
-  max-width: 250px;
-  max-height: 250px;
-  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
   margin-bottom: 20px;
+  display: block;
 }
 .assessments .grid-assessments .people p {
   max-width: 300px;
   text-align: center;
   line-height: 150%;
   margin: 10px 0;
+}
+.assessments .grid-assessments .people .stars {
+  width: 300px;
 }
 .assessments .btn-assessments {
   background-color: #BC9667;
@@ -390,7 +458,7 @@ header {
 }
 
 .footer {
-  height: 90vh;
+  height: 75vh;
   background: url(../assets/img/footer-bg.jpg) no-repeat top left;
   background-size: cover;
   position: relative;
@@ -400,7 +468,7 @@ header {
 .footer h2 {
   text-align: center;
   color: #ffffff;
-  padding-top: 90px;
+  padding-top: 50px;
 }
 .footer .input-group {
   display: flex;
@@ -446,7 +514,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 70px;
+  margin-top: 30px;
   color: #ffffff;
 }
 .footer .footer-links img {
@@ -497,6 +565,82 @@ header {
   cursor: pointer;
 }
 
+@media screen and (min-width: 780px) and (max-width: 900px) {
+  .hero .left h1 {
+    font-size: 2rem;
+  }
+  .about-quality {
+    flex-wrap: wrap;
+  }
+  .about-content {
+    flex-direction: column-reverse;
+  }
+  .products .grid-products {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .grid-products .item .img-item img {
+    max-width: 90%;
+  }
+  .footer {
+    height: 42vh;
+  }
+  .footer .footer-links {
+    justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 390px) and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero .left h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+  }
+  .hero .left p {
+    font-size: 1.5rem;
+  }
+  .hero .left button {
+    margin-bottom: 20px;
+  }
+  .hero .right {
+    display: none;
+  }
+  .about {
+    width: 100%;
+  }
+  .about .about-quality {
+    flex-wrap: wrap;
+  }
+  .about .img-about {
+    display: none;
+  }
+  .products .grid-products {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+  .products .grid-products .item .img-item img {
+    max-width: 100%;
+  }
+  .assessments .grid-assessments {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .assessments .grid-assessments .people img {
+    max-width: 70%;
+  }
+  .footer {
+    height: 65vh;
+  }
+  .footer .footer-links {
+    justify-content: space-between;
+  }
+  .footer .footer-links img {
+    display: none;
+  }
+  .footer .footer-links .description-logo-footer {
+    display: none;
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
   width: 100%;

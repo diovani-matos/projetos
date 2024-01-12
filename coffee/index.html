@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="scss/style.css">
     <title>Coffee Beans Shop</title>
 </head>
@@ -27,12 +29,23 @@
                 </ul>
             </nav>
 
+            <div class="mobile-menu mobile-menu-overlay">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#">Avaliações</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            
+
             <div class="header-icons">
                 <span><i class='bx bx-shopping-bag' ></i></span>
             </div>
 
-            <input hidden="" class="check-icon" id="check-icon" name="check-icon" type="checkbox">
-            <label class="icon-menu" for="check-icon">
+            <input hidden="" class="check-icon" id="check-icon" name="check-icon" type="checkbox" onclick="toggleMenu()">
+            <label class="icon-menu menu-icon" for="check-icon">
                 <div class="bar bar--1"></div>
                 <div class="bar bar--2"></div>
                 <div class="bar bar--3"></div>
@@ -41,19 +54,19 @@
         </header>
 
         <main class="hero container">
-            <div class="left">
+            <div class="left" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
                 <h1>Desperte seus sentidos venha provar o melhor café!</h1>
                 <p>Junte-se a nós para uma jornada de sabores, onde cada xícara conta uma história única. Venha explorar o universo do café conosco.</p>
                 <button>Comprar agora</button>
             </div>
 
-            <div class="right">
+            <div class="right" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
                 <img src="assets/img/main.png" alt="café">
             </div>
         </main>
     </div>
 
-    <section class="about container">
+    <section class="about container" data-aos="fade-down" data-aos-delay="200" data-aos-duration="1000">
         <div class="about-quality">
             <div class="quality">
                 <h3>Aroma Incrível</h3>
@@ -90,7 +103,7 @@
         <h2>Nossos produtos</h2>
 
         <div class="grid-products">
-            <div class="item">
+            <div class="item" data-aos="flip-left" data-aos-delay="200" data-aos-duration="1000">
                 <div class="img-item">
                     <img src="assets/img/p1.png" alt="produto 1">
                 </div>
@@ -104,7 +117,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" data-aos="flip-right" data-aos-delay="200" data-aos-duration="1000">
                 <div class="img-item">
                     <img src="assets/img/p1.png" alt="produto 1">
                 </div>
@@ -118,7 +131,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" data-aos="flip-left" data-aos-delay="200" data-aos-duration="1000">
                 <div class="img-item">
                     <img src="assets/img/p1.png" alt="produto 1">
                 </div>
@@ -132,7 +145,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" data-aos="flip-right" data-aos-delay="200" data-aos-duration="1000">
                 <div class="img-item">
                     <img src="assets/img/p1.png" alt="produto 1">
                 </div>
@@ -146,7 +159,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" data-aos="flip-left" data-aos-delay="200" data-aos-duration="1000">
                 <div class="img-item">
                     <img src="assets/img/p1.png" alt="produto 1">
                 </div>
@@ -160,7 +173,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" data-aos="flip-right" data-aos-delay="200" data-aos-duration="1000">
                 <div class="img-item">
                     <img src="assets/img/p1.png" alt="produto 1">
                 </div>
@@ -184,25 +197,22 @@
         <h2>Veja o que nossos clientes dizem</h2>
 
         <div class="grid-assessments container">
-            <div class="people">
-                <img src="assets/img/rev1.jpg" alt="">
+            <div class="people" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                <img src="assets/img/Design sem nome.png" alt="">
                 <h3>Pedro Lucas</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium perferendis minima nisi asperiores ea ratione laboriosam voluptatem rem.</p>
-                <img src="assets/img/assessments.jpg" alt="">
             </div>
 
-            <div class="people">
-                <img src="assets/img/rev2.jpg" alt="">
+            <div class="people" data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000">
+                <img src="assets/img/pessoa2.png" alt="">
                 <h3>Ricardo Lopes</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium perferendis minima nisi asperiores ea ratione laboriosam voluptatem rem.</p>
-                <img src="assets/img/assessments.jpg" alt="">
             </div>
 
-            <div class="people">
-                <img src="assets/img/rev3.jpg" alt="">
+            <div class="people" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                <img src="assets/img/pessoa3.png" alt="">
                 <h3>Elisa Moraes</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium perferendis minima nisi asperiores ea ratione laboriosam voluptatem rem.</p>
-                <img src="assets/img/assessments2.jpg" alt="">
             </div>
 
         </div>
@@ -249,5 +259,7 @@
 
         <p>&copy; <a href="https://www.instagram.com/diovanimatos/" target="_blank">Diovani Matos</a> - Todos os direitos reservados!</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
