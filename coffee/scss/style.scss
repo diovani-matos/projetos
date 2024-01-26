@@ -1,9 +1,9 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: 0;
-    list-style: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  list-style: none;
 }
 
 @import "colors";
@@ -11,27 +11,62 @@
 @import "layout";
 
 body {
-    font-family: 'Roboto', sans-serif;
-    width: 100%;
-    height: 100vh;
-    background-color: $white;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: $white;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Lora', serif;
-    text-transform: uppercase;
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Lora", serif;
+  text-transform: uppercase;
 }
 
 button {
-    cursor: pointer;
-    font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
 }
 
-img{
-    width: 100%;
+img {
+  width: 100%;
 }
 
 a {
-    text-decoration: none;
-    cursor: pointer;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cart-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.item-cart {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.close-modal {
+  cursor: pointer;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }

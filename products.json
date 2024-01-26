@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Café Premium",
+        "price": 25,
+        "image": "assets/img/p1.png"
+    },
+    {
+        "id": 2,
+        "name": "Café Premium",
+        "price": 25,
+        "image": "assets/img/p1.png"
+    },
+    {
+        "id": 3,
+        "name": "Café Premium",
+        "price": 25,
+        "image": "assets/img/p1.png"
+    },
+    {
+        "id": 4,
+        "name": "Café Premium",
+        "price": 25,
+        "image": "assets/img/p1.png"
+    },
+    {
+        "id": 5,
+        "name": "Café Premium",
+        "price": 25,
+        "image": "assets/img/p1.png"
+    },
+    {
+        "id": 6,
+        "name": "Café Premium",
+        "price": 25,
+        "image": "assets/img/p1.png"
+    }
+]

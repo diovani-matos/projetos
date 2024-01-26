@@ -6,7 +6,108 @@
 
 .bg-home {
     background: url(../assets/img/bg.png);
+    transition: transform .5s;
 }
+
+// CART SIDEBAR --------
+
+.cart-sidebar{
+    width: 400px;
+    background-color: $gray;
+    color: $white;
+    position: fixed;
+    inset: 0 -400px 0 auto; // top: 0, right: -400px, bottom: 0, left: auto
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+
+    h1{
+        padding: 20px;
+        font-size: 1.2rem;
+        margin: 10px auto;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .btn-cartlist{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .btn-cartlist button{
+        background-color: $primary-brown;
+        border: 0;
+        font-size: 1.1rem;
+        cursor: pointer;
+        font-weight: 500;
+        margin: 10px;
+    }
+
+    .btn-cartlist .close-cart {
+        background-color: lightgray;
+
+    }
+
+    .list-cart .item-cart{
+        display: grid;
+        grid-template-columns: 50px 120px 50px 1fr;
+        gap: 10px;
+        text-align: center;
+        align-items: center;
+        background: transparent;
+    }
+
+    .list-cart .item-cart img{
+        width: 100%;
+    }
+
+    .list-cart .item-cart .quantity{
+        display: flex;
+        gap: 5px;
+        
+            span{
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background-color: $white;
+                color: $dark-gray;
+                border-radius: 50%;
+                cursor: pointer;
+             }
+
+             span:nth-child(2){
+                background-color: transparent;
+                color: $white;
+             }
+
+             span:nth-child(4){
+                 margin-left: 15px;
+              }
+    }
+
+    .quantity button{
+        background: $white;
+        border: 1px solid transparent;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+
+    }
+
+
+
+}
+
+.showCart .cart-sidebar{
+    inset: 0 0 0 auto;
+    z-index: 9999;
+}
+
+.showCart .header{
+    transform: translateX(-250px);
+}
+
+
 
 // HERO --------------
 
@@ -32,7 +133,7 @@
             margin-bottom: 30px;
         }
 
-        button{
+        .btn-hero{
             background-color: $primary-brown;
             color: $white;
             border: none;
@@ -42,7 +143,7 @@
             transition: 0.2s ease-in-out;
         }
 
-        button:hover{
+        .btn-hero:hover{
             background-color: $secundary-brown;
         }
         
@@ -52,7 +153,6 @@
 
     img{
         max-width: 900px;
-        margin-bottom: 30px;
     }
 }
 
@@ -454,9 +554,28 @@
       
 }
 
+.btn-cart-mobile{
+    visibility: hidden;
+    position: fixed;
+    bottom: 14px;
+    right: 24px;
+    z-index: 999;
+    border: 0;
+    background: transparent;
+
+    i{
+        background-color: $primary-brown;
+        color: $white;
+        border: 0;
+        font-size: 34px;
+        border-radius: 14px;
+        padding: 5px;
+    }
+}
+
 // --------------
 
-@media screen and (min-width: 780px) and (max-width: 900px){
+@media screen and (min-width: 768px) and (max-width: 900px){
 
     .hero .left h1{
         font-size: 2rem;
@@ -481,10 +600,7 @@
         max-width: 90%;
     }
 
-    .assessments .grid-assessments .people{
-        // max-width: 100px;
-        // max-height: 100px;
-    }
+
 
     .footer{
         height: 42vh;
@@ -495,24 +611,35 @@
     }
 }
 
-@media screen and (min-width: 390px) and (max-width: 768px){
+
+
+@media screen and (min-width: 390px) and (max-width: 767px){
+
+    
     
     .hero {
         flex-direction: column;
     }
 
     .hero .left h1{
-        font-size: 2.5rem;
+        font-size: 2rem;
         margin-top: 20px;
+        margin-bottom: 50px;
     }
 
     .hero .left p{
-        font-size: 1.5rem;
+        display: none;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+
     }
 
-    .hero .left button {
-        margin-bottom: 20px;
+    .bg-home .hero .btn-hero{
+        display: block;
+        text-align: center;
+        margin: 0 40px 20px 40px;
     }
+
 
     .hero .right{
         display: none;
@@ -562,6 +689,16 @@
 
     .footer .footer-links .description-logo-footer{
         display: none;
+    }
+
+
+}
+
+@media screen and (min-width: 390px) and (max-width: 768px) {
+
+    .btn-cart-mobile{
+        visibility: visible;
+        
     }
 
 }
