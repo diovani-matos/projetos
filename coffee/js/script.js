@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateCartUI() {
-        cartList.innerHTML = ''; // Clear current cart UI
+        cartList.innerHTML = ''; //  Limpar UI do carrinho atual
         cart.forEach((item, index) => {
             const itemElement = document.createElement('div');
             itemElement.classList.add('item-cart');
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('cart', JSON.stringify(cart));
     }
 
-    // At the end, update the UI initially if there are items in the cart
+    //  No final atualize a UI inicialmente se houver itens no carrinho
     if (cart.length > 0) {
         updateCartUI();
     }
