@@ -1,0 +1,36 @@
+// Media Query
+
+/*
+600px ------------- Phone
+600px - 900px ----- Tablet
+900px - 1200px ---- Laptop
+1200px - 1800px --- Desktop / Large Screens
+
+breakpoint argument choices
+
+- phone
+- tablet
+- laptop
+- desktop
+
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media screen and (max-width: 37.5em) {
+      @content;
+    } // 600px
+  }
+
+  @if $breakpoint == tablet {
+    @media screen and (max-width: 56.25em) {
+      @content;
+    } // 900px
+  }
+
+  @if $breakpoint == laptop {
+    @media screen and (max-width: 75em) {
+      @content;
+    } // 1200px
+  }
+}

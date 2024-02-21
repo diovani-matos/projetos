@@ -1,0 +1,79 @@
+@import "./style/mixins.scss";
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  text-decoration: none;
+  outline: 0;
+  list-style: none;
+}
+
+body {
+  color: #111827;
+  background-color: #f3ebe8;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+}
+
+button {
+  display: inline-block;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  font-family: "Inter", sans-serif;
+}
+
+.button-outline {
+  color: #000;
+  background-color: transparent;
+  border: 1px solid #111827;
+
+  &:hover {
+    background-color: #f3d7cc;
+  }
+}
+
+.button-primary {
+  background-color: #ff7377;
+  color: #fff;
+  font-weight: 500;
+  padding-block: 0.8rem;
+
+  &:hover {
+    background-color: #f06479;
+  }
+}
+
+.p-1 {
+  color: #374151;
+  letter-spacing: -0.015rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.p-2 {
+  letter-spacing: -0.015rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #6a7280;
+}
+
+h2,
+h3 {
+  color: #111827;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 700;
+}
