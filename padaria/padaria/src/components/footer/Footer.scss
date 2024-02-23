@@ -1,0 +1,31 @@
+@import "../../style/mixins.scss";
+@import '../../index.scss';
+
+.footer {
+  background-color: #fff;
+  padding-block: 3rem;
+
+  img {
+    width: 20rem;
+    margin-inline: auto;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    width: fit-content;
+    margin-inline: auto;
+    margin-top: 1rem;
+  }
+
+  li {
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $secondary-pink;
+    }
+  }
+}

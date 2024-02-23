@@ -1,4 +1,5 @@
 @import '../../style/mixins.scss';
+@import '../../index.scss';
 
 .stats{
     padding-block: 8rem;
@@ -22,7 +23,7 @@
     }
 
     h1{
-        color: #ff7377;
+        color: $primary-pink;
         letter-spacing: -0.025rem;
         font-size: 3.5rem;
         line-height: 1.1;
