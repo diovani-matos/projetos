@@ -12,4 +12,4 @@ Um site para uma padaria!
 </div>
 
 ## Deploy
-https://barbearia2-0.vercel.app/
+https://panetteria.vercel.app/
