@@ -1,5 +1,5 @@
 @import "../../style/mixins.scss";
-@import '../../index.scss';
+@import "../../index.scss";
 
 .navbar {
   z-index: 1000;
@@ -51,7 +51,7 @@
     }
   }
 
-  li {
+  li a {
     font-weight: 500;
     color: $dark-gray;
     cursor: pointer;
@@ -60,6 +60,10 @@
     &:hover {
       color: $primary-pink;
     }
+  }
+
+  #btn__nav a{
+    color: #000;
   }
 
   &__menu {

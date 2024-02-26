@@ -8,7 +8,7 @@ function Navbar() {
   const [showNav, setShowNav] = useState(false);
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" id="home">
       <Wrapper className="navbar__container">
         <a href="#" className="navabar__logo" onClick={() => setShowNav(false)}>
           <img src={Logo} alt="logo" />
@@ -16,13 +16,19 @@ function Navbar() {
 
         <div className={`navbar__flex ${showNav ? "show-nav" : ""}`}>
           <ul className="navbar__links">
-            <li onClick={() => setShowNav(false)}>Home</li>
-            <li onClick={() => setShowNav(false)}>Sobre</li>
-            <li onClick={() => setShowNav(false)}>Cardápio</li>
+            <li onClick={() => setShowNav(false)}>
+              <a href="#home">Home</a>
+            </li>
+            <li onClick={() => setShowNav(false)}>
+              <a href="#sobre">Sobre</a>
+            </li>
+            <li onClick={() => setShowNav(false)}>
+              <a href="#menu">Cardápio</a>
+            </li>
           </ul>
 
-          <button className="button-outline" onClick={() => setShowNav(false)}>
-            Fazer reserva!
+          <button className="button-outline" onClick={() => setShowNav(false)} id="btn__nav">
+            <a href="#reserva">Fazer reserva!</a>
           </button>
         </div>
 

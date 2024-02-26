@@ -5,7 +5,7 @@ import Img2 from "../../assets/open-2.webp";
 
 function OpenSection() {
   return (
-    <section className="open">
+    <section className="open" id="sobre">
       <Wrapper className="open__container">
         <div className="open__first">
           <div>

@@ -81,7 +81,7 @@ function FlowerSection() {
     },
   ];
   return (
-    <section className="flower">
+    <section className="flower" id="menu">
       <Wrapper>
         <div className="flower__text">
           <h2>Novos Cafés</h2>

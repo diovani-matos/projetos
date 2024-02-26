@@ -9,10 +9,10 @@ function Footer(){
                 <img src={Logo} alt="" />
 
                 <ul className="footer__links">
-                    <li>Home</li>
-                    <li>Sobre</li>
-                    <li>Cardápio</li>
-                    <li>Reservar</li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#menu">Cardápio</a></li>
+                    <li><a href="#reserva">Reservar</a></li>
                 </ul>
             </Wrapper>
         </footer>

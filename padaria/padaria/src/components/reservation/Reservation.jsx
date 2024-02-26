@@ -4,7 +4,7 @@ import Img from "../../assets/reservation.webp";
 
 function Reservation() {
   return (
-    <section className="reservation">
+    <section className="reservation" id="reserva">
       <Wrapper className="reservation__container">
         <div className="reservation__left">
           <img src={Img} alt="" />
